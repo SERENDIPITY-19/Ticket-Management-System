@@ -1,0 +1,166 @@
+﻿/* General Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+:root {
+    --main-bg-color: #f5f5f5;
+    --secondary-text-color: white;
+    --header-bg-color: rgb(1, 43, 48);
+    --border-color: #ccc;
+    --nav-bg-color: rgb(3, 54, 61);
+    --footer-bg-color: rgb(218, 217, 217);
+}
+
+/* Grid Container */
+.layout-wrapper {
+    display: grid;
+    grid-template-areas:
+        "before-header before-header"
+        "header header"
+        "navigation after-header"
+        "navigation before-main"
+        "navigation feature"
+        "navigation aside-first"
+        "navigation before-content"
+        "navigation content"
+        "navigation after-content"
+        "navigation aside-second"
+        "navigation after-main"
+        "before-footer before-footer"
+        "footer footer"
+        "after-footer after-footer";
+    grid-template-columns: 0.5fr 5fr;
+    min-height: 100vh;
+}
+
+    /* Grid Area Styles */
+    .layout-wrapper > * {
+        padding: 10px 15px;
+        border: 1px solid var(--border-color);
+    }
+
+.before-header {
+    grid-area: before-header;
+    background: var(--header-bg-color);
+    color: var(--secondary-text-color);
+}
+
+.header {
+    grid-area: header;
+    background: var(--main-bg-color);
+}
+
+.after-header {
+    grid-area: after-header;
+    background: var(--main-bg-color);
+}
+
+.navigation {
+    grid-area: navigation;
+    background: var(--nav-bg-color);
+    color: var(--secondary-text-color);
+}
+
+.before-main {
+    grid-area: before-main;
+    background: var(--main-bg-color);
+}
+
+.feature {
+    grid-area: feature;
+    background: var(--main-bg-color);
+}
+
+.aside-first {
+    grid-area: aside-first;
+    background: var(--main-bg-color);
+}
+
+.before-content {
+    grid-area: before-content;
+    background: var(--main-bg-color);
+}
+
+.content {
+    grid-area: content;
+    background: var(--main-bg-color);
+}
+
+.after-content {
+    grid-area: after-content;
+    background: var(--main-bg-color);
+}
+
+.aside-second {
+    grid-area: aside-second;
+    background: var(--main-bg-color);
+}
+
+.after-main {
+    grid-area: after-main;
+    background: var(--main-bg-color);
+}
+
+.before-footer {
+    grid-area: before-footer;
+    background: var(--footer-bg-color);
+}
+
+.footer {
+    grid-area: footer;
+    background: var(--footer-bg-color);
+}
+
+.after-footer {
+    grid-area: after-footer;
+    background: var(--footer-bg-color);
+}
+
+/* Responsive Design */
+/* Tablet View */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .layout-wrapper {
+        grid-template-areas:
+            "before-header before-header before-header before-header"
+            "header header header header"
+            "navigation after-header after-header after-header"
+            "navigation before-main before-main before-main"
+            "navigation feature feature feature"
+            "navigation aside-first before-content aside-second"
+            "navigation aside-first content aside-second"
+            "navigation aside-first after-content aside-second"
+            "navigation after-main after-main after-main"
+            "before-footer before-footer before-footer before-footer"
+            "footer footer footer footer"
+            "after-footer after-footer after-footer after-footer";
+        grid-template-columns: 0.5fr 2fr 2fr 2fr;
+    }
+}
+
+/* Desktop View */
+@media (min-width: 1024px) {
+    .layout-wrapper {
+        grid-template-areas:
+            "before-header before-header before-header before-header"
+            "header header header header"
+            "navigation after-header after-header after-header"
+            "navigation before-main before-main before-main"
+            "navigation feature feature feature"
+            "navigation aside-first before-content aside-second"
+            "navigation aside-first content aside-second"
+            "navigation aside-first after-content aside-second"
+            "navigation after-main after-main after-main"
+            "before-footer before-footer before-footer before-footer"
+            "footer footer footer footer"
+            "after-footer after-footer after-footer after-footer";
+        grid-template-columns: 1fr 2fr 2fr 2fr;
+    }
+}

@@ -1,0 +1,99 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Ticket_Management_System</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/layout2.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/main.css" asp-append-version="true" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+</head>
+<body>
+    <div class="layout-wrapper">
+        <header class="header">
+            <div class="d-flex justify-content-between align-items-center">
+
+                <div class="d-flex align-items-center">
+                    <img class="me-2" src="images/repl_logo.png" />
+                    <span>REPL SOLUTIONS</span>
+                </div>
+
+                <div class="d-flex align-items-center top-icons">
+                    <button class="btn me-1">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+                    <button class="btn me-1">
+                        <i class="fa-regular fa-bell"></i>
+                    </button>
+                    <button class="btn me-1">
+                        <i class="fa-solid fa-gear"></i>
+                    </button>
+                    <button class="btn">
+                        <i class="fa-regular fa-user"></i>
+                    </button>
+                </div>
+            </div>
+
+        </header>
+
+        <nav class="navigation min-vh-100">
+            <div class="create-button btn-group">
+                <button type="button" class="btn btn-light" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="fa-solid fa-plus"></i>
+                    <span>Create</span>
+                </button>
+                <button type="button" class="btn btn-light dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+                </button>
+                <ul class="dropdown-menu">
+                    <li><span>Create New</span></li>
+                    <li><hr class="my-0" /></li>
+                    <li>
+                        <a class="dropdown-item" href="#">
+                            <i class="fa-solid fa-ticket"></i>
+                            <span>Tickets</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" href="#">
+                            <i class="fa-solid fa-user-plus"></i>
+                            <span>Users</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="navbar-icon">
+                <i class="fa-solid fa-house"></i>
+                <span>Home</span>
+            </div>
+            <div class="navbar-icon">
+                <i class="fa-regular fa-file"></i>
+                <span>Tickets</span>
+            </div>
+            <div class="navbar-icon">
+                <i class="fa-solid fa-users"></i>
+                <span>Customers</span>
+            </div>
+            <div class="navbar-icon">
+                <i class="fa-solid fa-chart-simple"></i>
+                <span>Reports</span>
+            </div>
+        </nav>
+
+        <button class="toggle-btn btn btn-light rounded-circle border shadow-sm">
+            <i class="fa-solid fa-chevron-left"></i>
+        </button>
+
+        <main role="main" class="content container pb-3">
+            @RenderBody()
+        </main>
+
+    </div>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

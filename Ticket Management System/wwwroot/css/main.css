@@ -1,0 +1,75 @@
+﻿.layout-wrapper > .before-header,
+.layout-wrapper > .after-header,
+.layout-wrapper > .after-main,
+.layout-wrapper > .before-footer,
+.layout-wrapper > .footer,
+.layout-wrapper > .after-footer {
+    display: none !important;
+}
+
+
+.navbar-icon {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+}
+
+
+    .navbar-icon i {
+        width: 20px;
+        height: 20px;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 18px;
+    }
+
+
+.dropdown-menu span {
+    padding: 0 0.5rem;
+    color: #6c757d;
+}
+
+.navigation {
+    width: 160px;
+    transition: width 0.3s ease;
+    overflow-x: hidden;
+}
+
+    .navigation.collapsed {
+        width: 80px;
+    }
+
+        .navigation.collapsed .navbar-icon span,
+        .navigation.collapsed .create-button span,
+        .navigation.collapsed .dropdown-toggle {
+            display: none;
+        }
+
+.toggle-btn {
+    position: absolute;
+    left: 140px;
+    top: 120px;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    transition: left 0.3s ease;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+    .toggle-btn.collapsed {
+        left: 60px;
+    }
+
+    .toggle-btn i {
+        transition: transform 0.3s ease;
+    }
+
+    .toggle-btn.collapsed i {
+        transform: rotate(180deg);
+    }
