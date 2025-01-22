@@ -7,7 +7,7 @@
     display: none !important;
 }
 
-
+/*Navbar*/
 .navbar-icon {
     padding: 10px;
     display: flex;
@@ -26,16 +26,18 @@
         font-size: 18px;
     }
 
-
-.dropdown-menu span {
-    padding: 0 0.5rem;
-    color: #6c757d;
+.dropdown-menu {
+    z-index: 1050;
 }
 
+    .dropdown-menu span {
+        padding: 0 0.5rem;
+        color: #6c757d;
+    }
+
 .navigation {
-    width: 160px;
+    width: 170px;
     transition: width 0.3s ease;
-    overflow-x: hidden;
 }
 
     .navigation.collapsed {
@@ -50,7 +52,7 @@
 
 .toggle-btn {
     position: absolute;
-    left: 140px;
+    left: 150px;
     top: 120px;
     width: 30px;
     height: 30px;
@@ -73,3 +75,10 @@
     .toggle-btn.collapsed i {
         transform: rotate(180deg);
     }
+
+/*Create Tickets*/
+.card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}

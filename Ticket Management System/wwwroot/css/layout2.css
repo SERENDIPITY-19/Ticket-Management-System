@@ -129,19 +129,21 @@ body {
 @media (min-width: 768px) and (max-width: 1023px) {
     .layout-wrapper {
         grid-template-areas:
-            "before-header before-header before-header before-header"
-            "header header header header"
-            "navigation after-header after-header after-header"
-            "navigation before-main before-main before-main"
-            "navigation feature feature feature"
-            "navigation aside-first before-content aside-second"
-            "navigation aside-first content aside-second"
-            "navigation aside-first after-content aside-second"
-            "navigation after-main after-main after-main"
-            "before-footer before-footer before-footer before-footer"
-            "footer footer footer footer"
-            "after-footer after-footer after-footer after-footer";
-        grid-template-columns: 0.5fr 2fr 2fr 2fr;
+            "before-header before-header"
+            "header header"
+            "navigation after-header"
+            "navigation before-main"
+            "navigation feature"
+            "navigation aside-first"
+            "navigation before-content"
+            "navigation content"
+            "navigation after-content"
+            "navigation aside-second"
+            "navigation after-main"
+            "before-footer before-footer"
+            "footer footer"
+            "after-footer after-footer";
+        grid-template-columns: 0.5fr 5fr;
     }
 }
 
@@ -149,18 +151,20 @@ body {
 @media (min-width: 1024px) {
     .layout-wrapper {
         grid-template-areas:
-            "before-header before-header before-header before-header"
-            "header header header header"
-            "navigation after-header after-header after-header"
-            "navigation before-main before-main before-main"
-            "navigation feature feature feature"
-            "navigation aside-first before-content aside-second"
-            "navigation aside-first content aside-second"
-            "navigation aside-first after-content aside-second"
-            "navigation after-main after-main after-main"
-            "before-footer before-footer before-footer before-footer"
-            "footer footer footer footer"
-            "after-footer after-footer after-footer after-footer";
-        grid-template-columns: 1fr 2fr 2fr 2fr;
+            "before-header before-header"
+            "header header"
+            "navigation after-header"
+            "navigation before-main"
+            "navigation feature"
+            "navigation aside-first"
+            "navigation before-content"
+            "navigation content"
+            "navigation after-content"
+            "navigation aside-second"
+            "navigation after-main"
+            "before-footer before-footer"
+            "footer footer"
+            "after-footer after-footer";
+        grid-template-columns: 0.5fr 5fr;
     }
 }
