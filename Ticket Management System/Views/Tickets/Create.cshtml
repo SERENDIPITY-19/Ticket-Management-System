@@ -9,41 +9,31 @@
         <div class="col-lg-6">
             <div class="card p-4">
                 <h5 class="mb-4 fw-bold">TICKET INFORMATION</h5>
-                <div class="mb-3">
-                    <button class="btn border dropdown-toggle" type="button" data-bs-toggle="modal" data-bs-target="#addCustomerModal">
+                <div class="dropdown mb-3">
+                    <button class="btn border dropdown-toggle" type="button" id="addCustomerDropdown" data-bs-toggle="dropdown" aria-expanded="false">
                         <i class="fa-solid fa-plus"></i>
                         <span>Add Customer</span>
                     </button>
 
-                    <div class="modal fade" id="addCustomerModal" tabindex="-1" aria-labelledby="addCustomerModalLabel" aria-hidden="true">
-                        <div class="modal-dialog modal-dialog-centered">
-                            <div class="modal-content">
-                                <div class="modal-header border-bottom-0">
-                                    <h5 class="modal-title" id="addCustomerModalLabel">Add Customer</h5>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                </div>
-                                <div class="modal-body">
-                                    <div class="input-group mb-3">
-                                        <span class="input-group-text bg-white">
-                                            <i class="fa-solid fa-magnifying-glass"></i>
-                                        </span>
-                                        <input type="text" class="form-control border-start-0" id="customerSearch" placeholder="Search name or contact info">
-                                    </div>
-
-                                    <ul class="list-group">
-                                        <li class="list-group-item d-flex align-items-center">
-                                            <img src="~/images/user.png" class="rounded-circle me-3" alt="User Image">
-                                            <div>
-                                                <strong>ABC</strong>
-                                                <div class="text-muted">abc9898@gmail.com</div>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
+                    <div class="dropdown-menu add-customer-dropdown p-3" aria-labelledby="addCustomerDropdown">
+                        <div class="input-group mb-3">
+                            <span class="input-group-text bg-white">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </span>
+                            <input type="text" class="form-control border-start-0" id="customerSearch" placeholder="Search name or contact info">
                         </div>
-                    </div>
+                        <hr class="dropdown-divider" />
 
+                        <ul class="list-group">
+                            <li class="list-group-item d-flex align-items-center dropdown-item p-0 border-0">
+                                <img src="~/images/user.png" class="rounded-circle me-3" alt="User Image">
+                                <div>
+                                    <strong>ABC</strong>
+                                    <div class="text-muted">abc9898@gmail.com</div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
                 <div class="mb-3">
                     <label for="Title" class="form-label">Title</label>

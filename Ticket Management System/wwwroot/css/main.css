@@ -7,6 +7,15 @@
     display: none !important;
 }
 
+.layout-wrapper > * {
+    padding: 0;
+}
+
+/*Header*/
+.header {
+    padding: 15px;
+}
+
 /*Navbar*/
 .navbar-icon {
     padding: 10px;
@@ -36,6 +45,7 @@
     }
 
 .navigation {
+    padding: 15px;
     width: 170px;
     transition: width 0.3s ease;
 }
@@ -81,4 +91,9 @@
     border: 1px solid #ddd;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.add-customer-dropdown {
+    min-width: 400px;
+    min-height: 300px;
 }
