@@ -1,0 +1,115 @@
+﻿@{
+    ViewData["Title"] = "UserDetails";
+}
+<div class="container my-4">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <div class="d-flex align-items-center">
+            <img src="~/images/user.png" alt="User Profile" class="profile-img me-3">
+            <div>
+                <h5>Bryan <span class="badge bg-light border border-1 text-dark">Customer</span></h5>
+                <div class="text-muted">
+                    <i class="fa-solid fa-envelope"></i> abc@gmail.com
+                    <br />
+                    <i class="fa-solid fa-phone"></i> +977 9812345678
+                </div>
+            </div>
+        </div>
+        <div class="d-flex justify-content-center align-items-center">
+            <div class="dropdown">
+                <button class="btn btn-link text-decoration-none" id="UserDetailsDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="fa-solid fa-ellipsis-vertical text-black"></i>
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Merge into another user</a></li>
+                    <li><a class="dropdown-item" href="#">Suspend</a></li>
+                    <li><a class="dropdown-item text-danger" href="#">Delete</a></li>
+                </ul>
+            </div>
+            <div>
+                <a asp-controller="Tickets" asp-action="Create" class="btn btn-primary">
+                    <i class="fa-solid fa-plus"></i>
+                    <span>Create Ticket</span>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="row g-4">
+        <div class="col-md-8">
+            <h4 class="m-3">Tickets</h4>
+            <div class="card">
+                <div class="card-body p-0">
+                    <table class="table table-hover mb-0">
+                        <thead>
+                            <tr class="card-header">
+                                <th scope="col"><input type="checkbox"></th>
+                                <th scope="col">Name</th>
+                                <th scope="col">ID</th>
+                                <th scope="col">Title</th>
+                                <th scope="col">Updated</th>
+                                <th scope="col">Requested</th>
+                                <th scope="col">Assignee</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><input type="checkbox"></td>
+                                <td><span class="badge-status badge-onhold"><i class="fa-solid fa-pause me-2"></i>On Hold</span></td>
+                                <td>#1</td>
+                                <td>Error in line item</td>
+                                <td>5 days ago</td>
+                                <td>3 days ago</td>
+                                <td><img src="~/images/user.png" alt="Assignee"></td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox"></td>
+                                <td><span class="badge-status badge-inprogress"><i class="fa-solid fa-clock me-2"></i>In Progress</span></td>
+                                <td>#6</td>
+                                <td>Student details</td>
+                                <td>3 days ago</td>
+                                <td>3 days ago</td>
+                                <td><img src="~/images/user.png" alt="Assignee"></td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox"></td>
+                                <td><span class="badge-status badge-new"><i class="fa-solid fa-user-plus me-2"></i>New</span></td>
+                                <td>#23</td>
+                                <td>Report Error</td>
+                                <td>3 days ago</td>
+                                <td>3 days ago</td>
+                                <td><img src="~/images/user.png" alt="Assignee"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <h4 class="m-3">Details</h4>
+            <div class="card">
+                <div class="card-body">
+                    <div class="d-flex align-items-center mb-3">
+                        <img src="~/images/user.png" alt="Profile" class="profile-img me-2">
+                        <h5>Bryan</h5>
+                        <button class="btn btn-link text-decoration-none ms-auto"><i class="fa-solid fa-ellipsis-vertical text-black"></i></button>
+                    </div>
+                    <div class="text-muted mb-3">
+                        <i class="fa-solid fa-user"></i> Customer <br />
+                        <i class="fa-solid fa-envelope"></i> abc@gmail.com <br>
+                        <i class="fa-solid fa-phone"></i> +977-9812345678
+                    </div>
+                    <div class="dropdown">
+                        <button class="btn border text-decoration-none text-black" id="addContactDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fa-solid fa-plus"></i>
+                            <span>Add Contact</span>
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="addContactDropdown">
+                            <li class="dropdown-item"><i class="fa-solid fa-envelope me-1"></i> Email</li>
+                            <li class="dropdown-item"><i class="fa-solid fa-phone me-1"></i> Phone</li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

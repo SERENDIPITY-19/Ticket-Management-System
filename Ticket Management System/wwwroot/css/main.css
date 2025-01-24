@@ -51,19 +51,31 @@
 }
 
     .navigation.collapsed {
-        width: 80px;
+        width: 110px;
     }
 
         .navigation.collapsed .navbar-icon span,
-        .navigation.collapsed .create-button span,
-        .navigation.collapsed .dropdown-toggle {
+        .navigation.collapsed .create-button span {
             display: none;
         }
+
+.create-button {
+    border-radius: 0;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.options-button {
+    border-left-color: black;
+    border-radius: 0;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
 
 .toggle-btn {
     position: absolute;
     left: 150px;
-    top: 120px;
+    top: 150px;
     width: 30px;
     height: 30px;
     cursor: pointer;
@@ -75,7 +87,7 @@
 }
 
     .toggle-btn.collapsed {
-        left: 60px;
+        left: 90px;
     }
 
     .toggle-btn i {
@@ -85,6 +97,11 @@
     .toggle-btn.collapsed i {
         transform: rotate(180deg);
     }
+
+/*Main*/
+.content {
+    padding: 10px;
+}
 
 /*Create Tickets*/
 .card {
@@ -96,4 +113,35 @@
 .add-customer-dropdown {
     min-width: 400px;
     min-height: 300px;
+}
+
+/*UserDetails*/
+.badge-status {
+    display: inline-block;
+    padding: 0.35rem 0.5rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    border-radius: 0.25rem;
+}
+
+.badge-onhold {
+    background-color: #dee2e6;
+    color: #495057;
+}
+
+.badge-inprogress {
+    background-color: #ffc107;
+    color: #212529;
+}
+
+.badge-new {
+    background-color: #d1e7dd;
+    color: #0f5132;
+}
+
+.profile-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
 }

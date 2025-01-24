@@ -58,29 +58,31 @@
         </header>
 
         <nav class="navigation min-vh-100">
-            <div class="btn-group">
-                <button type="button" class="btn btn-light create-button" data-bs-toggle="dropdown" aria-expanded="false">
+            <div class="btn-group my-2">
+                <a asp-controller="Tickets" asp-action="Create" class="btn btn-light create-button">
                     <i class="fa-solid fa-plus"></i>
                     <span>Create</span>
-                </button>
-                <button type="button" class="btn btn-light dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-                </button>
-                <ul class="dropdown-menu dropdown-menu-end">
-                    <li><span>Create New</span></li>
-                    <li><hr class="my-0" /></li>
-                    <li>
-                        <a class="dropdown-item" asp-controller="Tickets" asp-action="Create">
-                            <i class="fa-solid fa-ticket"></i>
-                            <span>Tickets</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a class="dropdown-item" asp-controller="Users" asp-action="Create" data-bs-toggle="modal" data-bs-target="#createUserModal">
-                            <i class="fa-solid fa-user-plus"></i>
-                            <span>Users</span>
-                        </a>
-                    </li>
-                </ul>
+                </a>
+                <div class="dropdown">
+                    <button type="button" class="btn btn-light options-button dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-end">
+                        <li><span>Create New</span></li>
+                        <li><hr class="my-0" /></li>
+                        <li>
+                            <a class="dropdown-item" asp-controller="Tickets" asp-action="Create">
+                                <i class="fa-solid fa-ticket"></i>
+                                <span>Tickets</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" asp-controller="Users" asp-action="Create" data-bs-toggle="modal" data-bs-target="#createUserModal">
+                                <i class="fa-solid fa-user-plus"></i>
+                                <span>Users</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
             </div>
             <div class="navbar-icon">
                 <a asp-controller="Home" asp-action="Index" class="text-decoration-none text-white">
@@ -112,7 +114,7 @@
             <i class="fa-solid fa-chevron-left"></i>
         </button>
 
-        <main role="main" class="content container pb-3">
+        <main role="main" class="content container">
             @RenderBody()
         </main>
 
