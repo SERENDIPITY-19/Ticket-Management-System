@@ -3,15 +3,35 @@
 }
 <div class="container my-4">
     <h4 class="my-3"> All Tickets</h4>
-    <button class="btn btn-outline-primary d-flex align-items-center gap-2">
-        <i class="fa-solid fa-sliders"></i> Filter
-    </button>
+    <div class="d-flex gap-3">
+        <button class="btn btn-outline-primary d-flex align-items-center gap-2">
+            <i class="fa-solid fa-sliders"></i> Filter
+        </button>
+        <div class="border" id="ticketActions">
+            <div class="d-flex align-items-center ticket-actions">
+                <span class="fw-bold ms-2 me-4">1 ticket</span>
+                <a href="#" class="text-black text-decoration-none">
+                    <i class="fa-solid fa-pen me-1"></i>
+                    <span class="me-3">Edit</span>
+                </a>
+                <br />
+                <a href="#" class="text-black text-decoration-none">
+                    <i class="fa-solid fa-trash me-1"></i>
+                    <span>Delete</span>
+                </a>
+                <button class="btn text-danger text-decoration-none ms-auto ticket-cancel-btn">
+                    <i class="fa-solid fa-xmark me-1"></i>
+                    <span>Cancel</span>
+                </button>
+            </div>
+        </div>
+    </div>
     <div class="card mt-3">
         <div class="card-body p-0">
             <table class="table table-hover mb-0">
                 <thead>
                     <tr class="card-header">
-                        <th scope="col"><input type="checkbox"></th>
+                        <th scope="col"><input type="checkbox" id="selectAll"></th>
                         <th scope="col">Ticket Status</th>
                         <th scope="col">Subject</th>
                         <th scope="col">Requester</th>
@@ -22,7 +42,7 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td><input type="checkbox"></td>
+                        <td><input type="checkbox" class="ticket-checkbox"></td>
                         <td><span class="badge-status badge-new"><i class="fa-solid fa-user-plus me-2"></i>New</span></td>
                         <td>Report not working</td>
                         <td>Bryan</td>
@@ -31,7 +51,7 @@
                         <td><img src="~/images/user.png" alt="Assignee"></td>
                     </tr>
                     <tr>
-                        <td><input type="checkbox"></td>
+                        <td><input type="checkbox" class="ticket-checkbox"></td>
                         <td><span class="badge-status badge-onhold"><i class="fa-solid fa-pause me-2"></i>On Hold</span></td>
                         <td>Error in line item</td>
                         <td>Bryan</td>
@@ -40,7 +60,7 @@
                         <td><img src="~/images/user.png" alt="Assignee"></td>
                     </tr>
                     <tr>
-                        <td><input type="checkbox"></td>
+                        <td><input type="checkbox" class="ticket-checkbox"></td>
                         <td><span class="badge-status badge-inprogress"><i class="fa-solid fa-clock me-2"></i>In Progress</span></td>
                         <td>Student details</td>
                         <td>Bryan</td>
@@ -49,7 +69,7 @@
                         <td><img src="~/images/user.png" alt="Assignee"></td>
                     </tr>
                     <tr>
-                        <td><input type="checkbox"></td>
+                        <td><input type="checkbox" class="ticket-checkbox"></td>
                         <td><span class="badge-status badge-new"><i class="fa-solid fa-user-plus me-2"></i>New</span></td>
                         <td>Student details</td>
                         <td>Bryan</td>

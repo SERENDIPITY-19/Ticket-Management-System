@@ -103,7 +103,7 @@
     padding: 10px;
 }
 
-/*Create Tickets*/
+/*Tickets*/
 .card {
     border: 1px solid #ddd;
     border-radius: 8px;
@@ -113,6 +113,11 @@
 .add-customer-dropdown {
     min-width: 400px;
     min-height: 300px;
+}
+
+.ticket-actions {
+    border-radius: 7px;
+    width: 400px;
 }
 
 /*UserDetails*/
