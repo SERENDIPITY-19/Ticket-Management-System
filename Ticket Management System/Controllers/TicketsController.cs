@@ -12,5 +12,9 @@ namespace Ticket_Management_System.Controllers
         {
             return View();
         }
+        public IActionResult ViewTickets()
+        {
+            return View();
+        }
     }
 }

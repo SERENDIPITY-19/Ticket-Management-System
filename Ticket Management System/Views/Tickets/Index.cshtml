@@ -1,5 +1,5 @@
 ﻿@{
-    ViewData["Title"] = "View Tickets";
+    ViewData["Title"] = "All Tickets";
 }
 <div class="container my-4">
     <h4 class="my-3"> All Tickets</h4>
@@ -44,7 +44,11 @@
                     <tr>
                         <td><input type="checkbox" class="ticket-checkbox"></td>
                         <td><span class="badge-status badge-new"><i class="fa-solid fa-user-plus me-2"></i>New</span></td>
-                        <td>Report not working</td>
+                        <td>
+                            <a asp-controller="Tickets" asp-action="ViewTickets">
+                                Report not working
+                            </a>
+                        </td>
                         <td>Bryan</td>
                         <td>3 days ago</td>
                         <td>Ticket Status</td>
