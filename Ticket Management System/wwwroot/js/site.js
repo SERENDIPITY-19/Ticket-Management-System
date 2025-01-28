@@ -37,3 +37,28 @@ document.addEventListener('DOMContentLoaded', () => {
         selectAll.checked = false;
     });
 });
+
+//Update ticket status
+document.querySelectorAll('#statusList li').forEach(item => {
+    item.addEventListener('click', function () {
+        const iconElement = this.querySelector('i');
+        const iconClass = iconElement.className;
+
+        const buttonIcon = document.querySelector('#StatusDropdown i');
+        buttonIcon.className = iconClass;
+    });
+});
+
+//Collapse description overflow
+const collapseElement = document.getElementById('collapseText');
+const icon = document.querySelector('.expand-btn i');
+
+collapseElement.addEventListener('show.bs.collapse', function () {
+    icon.classList.remove('fa-up-right-and-down-left-from-center');
+    icon.classList.add('fa-down-left-and-up-right-to-center');
+});
+
+collapseElement.addEventListener('hide.bs.collapse', function () {
+    icon.classList.remove('fa-down-left-and-up-right-to-center');
+    icon.classList.add('fa-up-right-and-down-left-from-center');
+});

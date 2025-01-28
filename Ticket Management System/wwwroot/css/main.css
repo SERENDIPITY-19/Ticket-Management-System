@@ -120,6 +120,37 @@
     width: 400px;
 }
 
+#StatusDropdown {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#statusList li {
+    cursor: pointer;
+}
+
+.text-container p:not(.show) {
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.customer-email-card {
+    background-color: #ececec;
+}
+
+.support-email-card {
+    background-color: #daecff;
+}
+
+.support-note-card {
+    background-color: #ffd293;
+}
+
 /*UserDetails*/
 .badge-status {
     display: inline-block;
