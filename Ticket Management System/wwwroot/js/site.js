@@ -62,3 +62,25 @@ collapseElement.addEventListener('hide.bs.collapse', function () {
     icon.classList.remove('fa-down-left-and-up-right-to-center');
     icon.classList.add('fa-up-right-and-down-left-from-center');
 });
+
+//Search Users
+const searchInput = document.getElementById('searchInput');
+const dropdownItems = document.querySelectorAll('.dropdown-item');
+const selectedOption = document.getElementById('selectedOption');
+searchInput.addEventListener('input', function () {
+    const filter = searchInput.value.toLowerCase();
+    dropdownItems.forEach(item => {
+        const name = item.querySelector(".requester-name").innerText.toLowerCase();
+        const email = item.querySelector(".requester-email").innerText.toLowerCase();
+        item.style.display = (name.includes(filter) || email.includes(filter)) ? "" : "none";
+    });
+});
+
+//Update selected options in dropdown just like <select>
+dropdownItems.forEach(item => {
+    item.addEventListener('click', function () {
+        const value = this.getAttribute("data-value");
+        const iconHTML = this.querySelector('img').outerHTML;
+        selectedOption.innerHTML = `${iconHTML} ${value}`;
+    });
+});
