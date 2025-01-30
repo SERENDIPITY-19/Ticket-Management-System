@@ -5,14 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - Ticket_Management_System</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/css/layout2.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/css/main.css" asp-append-version="true" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
 </head>
 <body>
     <div class="layout-wrapper">
-        <header class="header">
+        <header class="header p-3">
             <div class="d-flex justify-content-between align-items-center">
 
                 <div class="d-flex align-items-center">
@@ -61,8 +60,8 @@
             </div>
         </header>
 
-        <nav class="navigation min-vh-100">
-            <div class="btn-group my-2">
+        <nav class="navigation">
+            <div class="btn-group my-2 create-new">
                 <a asp-controller="Tickets" asp-action="Create" class="btn btn-light create-button">
                     <i class="fa-solid fa-plus"></i>
                     <span>Create</span>
@@ -91,25 +90,25 @@
             <div class="navbar-icon">
                 <a asp-controller="Home" asp-action="Index" class="text-decoration-none text-white">
                     <i class="fa-solid fa-house"></i>
-                    <span>Home</span>
+                    <span class="navbar-title">Home</span>
                 </a>
             </div>
             <div class="navbar-icon">
                 <a asp-controller="Tickets" asp-action="Index" class="text-decoration-none text-white">
                     <i class="fa-regular fa-file"></i>
-                    <span>Tickets</span>
+                    <span class="navbar-title">Tickets</span>
                 </a>
             </div>
             <div class="navbar-icon">
                 <a asp-controller="Users" asp-action="Index" class="text-decoration-none text-white">
                     <i class="fa-solid fa-users"></i>
-                    <span>Users</span>
+                    <span class="navbar-title">Users</span>
                 </a>
             </div>
             <div class="navbar-icon">
                 <a asp-controller="Reports" asp-action="Index" class="text-decoration-none text-white">
                     <i class="fa-solid fa-chart-simple"></i>
-                    <span>Reports</span>
+                    <span class="navbar-title">Reports</span>
                 </a>
             </div>
         </nav>
@@ -118,7 +117,7 @@
             <i class="fa-solid fa-chevron-left"></i>
         </button>
 
-        <main role="main" class="content container">
+        <main role="main" class="content p-2">
             @RenderBody()
         </main>
 
