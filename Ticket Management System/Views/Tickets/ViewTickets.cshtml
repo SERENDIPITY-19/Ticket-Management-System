@@ -345,23 +345,39 @@
                                     <i class="fa-solid fa-user me-1"></i>
                                     <span>Assignee</span>
                                 </label>
-                                <button class="btn border w-100 dropdown-toggle d-flex align-items-center justify-content-between" type="button" id="assigneeDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+
+                                <button class="btn border w-100 dropdown-toggle d-flex align-items-center justify-content-between" type="button" id="assigneeDropdown" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">
                                     <div class="d-flex align-items-center">
-                                        <i class="fa-solid fa-user me-2"></i>
-                                        <span>Select Assignee</span>
+                                        <i class="fa-solid fa-user-circle me-2"></i>
+                                        <span class="selected-text">Select Assignee</span>
                                     </div>
                                 </button>
+
                                 <ul class="dropdown-menu w-100 p-0" aria-labelledby="assigneeDropdown">
-                                    <li class="dropdown-header border-bottom">Groups</li>
                                     <li>
-                                        <a class="dropdown-item d-flex align-items-center justify-content-between" href="#">
-                                            <span><i class="fa-solid fa-users me-2"></i>Support</span>
-                                        </a>
+                                        <div class="dropdown-header border-bottom">Groups</div>
                                     </li>
-                                    <li>
-                                        <a class="dropdown-item d-flex align-items-center justify-content-between" href="#">
+                                    <li class="dropdown dropend">
+                                        <button class="dropdown-item d-flex align-items-center justify-content-between" type="button" data-bs-toggle="dropdown">
+                                            <span><i class="fa-solid fa-users me-2"></i>Support</span>
+                                            <i class="fa-solid fa-chevron-right ms-2"></i>
+                                        </button>
+                                        <ul class="dropdown-menu">
+                                            <li><button class="dropdown-item" type="button" onclick="updateAssignee(this)">Ram</button></li>
+                                            <li><button class="dropdown-item" type="button" onclick="updateAssignee(this)">Sita</button></li>
+                                            <li><button class="dropdown-item" type="button" onclick="updateAssignee(this)">Hari</button></li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown dropend">
+                                        <button class="dropdown-item d-flex align-items-center justify-content-between" type="button" data-bs-toggle="dropdown">
                                             <span><i class="fa-solid fa-users me-2"></i>Marketing</span>
-                                        </a>
+                                            <i class="fa-solid fa-chevron-right ms-2"></i>
+                                        </button>
+                                        <ul class="dropdown-menu">
+                                            <li><button class="dropdown-item" type="button" onclick="updateAssignee(this)">Tom</button></li>
+                                            <li><button class="dropdown-item" type="button" onclick="updateAssignee(this)">John</button></li>
+                                            <li><button class="dropdown-item" type="button" onclick="updateAssignee(this)">Roger</button></li>
+                                        </ul>
                                     </li>
                                 </ul>
                             </div>
