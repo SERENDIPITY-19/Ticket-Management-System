@@ -41,7 +41,7 @@ body {
 
 /*Navbar*/
 .navbar-icon {
-    padding: 10px;
+    padding: 10px 20px;
     display: flex;
     align-items: center;
     gap: 8px;
@@ -98,7 +98,7 @@ body {
 .toggle-btn {
     position: absolute;
     left: 150px;
-    top: 150px;
+    top: 170px;
     width: 30px;
     height: 30px;
     cursor: pointer;
@@ -169,6 +169,15 @@ body {
 
 #statusList li {
     cursor: pointer;
+}
+
+#statusList i {
+    width: 20px;
+    height: 20px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
 }
 
 .text-container p:not(.show) {
