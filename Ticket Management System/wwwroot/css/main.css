@@ -190,6 +190,68 @@ body {
     background-color: #ffd293;
 }
 
+/* Status icon colors */
+.ticket-open {
+    color: #0d47a1;
+}
+
+.ticket-in-progress {
+    color: #2e7d32;
+}
+
+.ticket-on-hold {
+    color: #ef6c00;
+}
+
+.ticket-pending {
+    color: #7b1fa2;
+}
+
+.ticket-resolved {
+    color: #1b5e20;
+}
+
+.ticket-closed {
+    color: #263238;
+}
+
+.ticket-reopened {
+    color: #ff8f00;
+}
+
+.ticket-escalated {
+    color: #c2185b;
+}
+
+.ticket-rejected {
+    color: #c62828;
+}
+
+.severity-minor, .priority-low {
+    background-color: #28a745;
+    color: white;
+}
+
+.severity-moderate, .priority-medium {
+    background-color: #ffc107;
+    color: white;
+}
+
+.severity-major, .priority-high {
+    background-color: #fd7e14;
+    color: white;
+}
+
+.severity-critical, .priority-critical {
+    background-color: #dc3545;
+    color: white;
+}
+
+/* Hover states for dropdown items */
+.dropdown-item:hover {
+    background-color: #f5f5f5;
+}
+
 /*UserDetails*/
 .badge-status {
     display: inline-block;

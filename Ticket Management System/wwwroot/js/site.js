@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-//Update ticket status
+////Update ticket status
 document.querySelectorAll('#statusList li').forEach(item => {
     item.addEventListener('click', function () {
         const iconElement = this.querySelector('i');
@@ -78,3 +78,20 @@ function updateAssignee(element) {
     const selectedText = element.textContent;
     document.querySelector('.selected-text').textContent = selectedText;
 }
+
+//Update Severity and priority option
+document.querySelectorAll('.severity-option, .priority-option').forEach(item => {
+    item.addEventListener('click', (e) => {
+        const type = e.target.classList.contains('severity-option') ? 'severity' : 'priority';
+        const value = e.target.dataset[type];
+        const dropdownButton = e.target.closest(`.${type}-dropdown`).querySelector(`.${type}-badge`);
+
+        dropdownButton.classList.remove(
+            `${type}-minor`, `${type}-moderate`, `${type}-major`, `${type}-critical`,
+            `${type}-low`, `${type}-medium`, `${type}-high`
+        );
+
+        dropdownButton.classList.add(`${type}-${value}`);
+        dropdownButton.textContent = e.target.textContent;
+    });
+});

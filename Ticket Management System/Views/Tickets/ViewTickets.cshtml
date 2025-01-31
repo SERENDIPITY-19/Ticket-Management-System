@@ -2,27 +2,57 @@
     ViewData["Title"] = "View Tickets";
 }
 <div class="container my-4">
+    <h2 class="mb-4">Ticket/Ticket Details</h2>
     <div class="row g-4">
         <div class="col-md-8">
             <div class="card p-4">
                 <div class="d-flex align-items-center">
-                    <h5 class="mb-4 fw-bold">Ticket Title</h5>
+                    <div>
+                        <h5 class="mb-4 fw-bold">Ticket Title</h5>
+                        <div class="d-flex align-items-center">
+                            <div class="dropdown severity-dropdown me-2">
+                                <span class="me-1">Severity:</span>
+                                <button class="btn badge severity-badge severity-minor dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Minor
+                                </button>
+                                <ul class="dropdown-menu severity-list">
+                                    <li><button class="dropdown-item severity-option text-success" type="button" data-severity="minor">Minor</button></li>
+                                    <li><button class="dropdown-item severity-option text-warning" type="button" data-severity="moderate">Moderate</button></li>
+                                    <li><button class="dropdown-item severity-option text-danger" type="button" data-severity="major">Major</button></li>
+                                    <li><button class="dropdown-item severity-option text-danger fw-bold" type="button" data-severity="critical">Critical / ShowStopper</button></li>
+                                </ul>
+                            </div>
+
+                            <div class="dropdown priority-dropdown">
+                                <span class="me-1">Priority:</span>
+                                <button class="btn badge priority-badge priority-low dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Low
+                                </button>
+                                <ul class="dropdown-menu priority-list">
+                                    <li><button class="dropdown-item priority-option text-success" type="button" data-priority="low">Low</button></li>
+                                    <li><button class="dropdown-item priority-option text-warning" type="button" data-priority="medium">Medium</button></li>
+                                    <li><button class="dropdown-item priority-option text-danger" type="button" data-priority="high">High</button></li>
+                                    <li><button class="dropdown-item priority-option text-danger fw-bold" type="button" data-priority="critical">Critical / Blocker</button></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
                     <div class="d-flex align-items-center ms-auto gap-2">
-                        <span class="badge text-black bg-light">Ticket #22</span>
+                        <span class="badge text-black bg-light border">Ticket #22</span>
                         <div class="dropdown">
-                            <button class="btn bg-info" id="StatusDropdown" data-bs-toggle="dropdown" aria-expanded="false">
-                                <i class="fa-regular fa-circle"></i>
+                            <button class="btn bg-light border" id="StatusDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="fa-regular fa-circle ticket-open"></i>
                             </button>
                             <ul class="dropdown-menu" id="statusList">
-                                <li class="dropdown-item"><i class="fa-regular fa-circle"></i> Open</li>
-                                <li class="dropdown-item"><i class="fa-solid fa-clock"></i> In Progress</li>
-                                <li class="dropdown-item"><i class="fa-solid fa-pause"></i> On Hold</></li>
-                                <li class="dropdown-item"><i class="fa-solid fa-hourglass-half"></i> Pending</li>
-                                <li class="dropdown-item"><i class="fa-regular fa-check-circle"></i> Resolved</li>
-                                <li class="dropdown-item"><i class="fa-solid fa-lock"></i> Closed</li>
-                                <li class="dropdown-item"><i class="fa-solid fa-arrow-rotate-left"></i> Reopened</li>
-                                <li class="dropdown-item"><i class="fa-solid fa-angles-up"></i> Escalated</li>
-                                <li class="dropdown-item"><i class="fa-solid fa-times-circle"></i> Rejected</li>
+                                <li><button class="dropdown-item"><i class="fa-regular fa-circle ticket-open"></i> Open</button></li>
+                                <li><button class="dropdown-item"><i class="fa-solid fa-clock ticket-in-progress"></i> In Progress</button></li>
+                                <li><button class="dropdown-item"><i class="fa-solid fa-pause ticket-on-hold"></i> On Hold</button></li>
+                                <li><button class="dropdown-item"><i class="fa-solid fa-hourglass-half ticket-pending"></i> Pending</button></li>
+                                <li><button class="dropdown-item"><i class="fa-regular fa-check-circle ticket-resolved"></i> Resolved</button></li>
+                                <li><button class="dropdown-item"><i class="fa-solid fa-lock ticket-closed"></i> Closed</button></li>
+                                <li><button class="dropdown-item"><i class="fa-solid fa-arrow-rotate-left ticket-reopened"></i> Reopened</button></li>
+                                <li><button class="dropdown-item"><i class="fa-solid fa-angles-up ticket-escalated"></i> Escalated</button></li>
+                                <li><button class="dropdown-item"><i class="fa-solid fa-times-circle ticket-rejected"></i> Rejected</button></li>
                             </ul>
                         </div>
                         <div class="dropdown">
