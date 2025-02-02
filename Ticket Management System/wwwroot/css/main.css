@@ -256,6 +256,27 @@ body {
     color: white;
 }
 
+.ticket-details-card {
+    height: 1000px;
+    position: relative;
+}
+
+.email-container {
+    flex-grow: 1;
+    overflow-y: auto;
+    max-height: calc(100% - 560px);
+}
+
+.email-reply,
+.add-note {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 96%;
+    margin: 15px;
+}
+
+
 /*UserDetails*/
 .badge-onhold {
     background-color: #dee2e6;

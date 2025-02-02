@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-////Update ticket status
+//Update ticket status
 document.querySelectorAll('#statusList li').forEach(item => {
     item.addEventListener('click', function () {
         const iconElement = this.querySelector('i');
@@ -93,5 +93,42 @@ document.querySelectorAll('.severity-option, .priority-option').forEach(item => 
 
         dropdownButton.classList.add(`${type}-${value}`);
         dropdownButton.textContent = e.target.textContent;
+    });
+});
+
+//Toggle between email-reply and add-note cards
+const emailReplyCard = document.querySelector('.email-reply');
+const addNoteCard = document.querySelector('.add-note');
+
+addNoteCard.style.display = 'none';
+
+function handleDropdownClick(event) {
+    const clickedButton = event.target.closest('.reply-note-dropdown-item');
+    if (!clickedButton) return;
+
+    const isNoteOption = clickedButton.querySelector('.reply-note-title').textContent.trim() === 'Note';
+
+    if (isNoteOption) {
+        emailReplyCard.style.display = 'none';
+        addNoteCard.style.display = 'block';
+    } else {
+        emailReplyCard.style.display = 'block';
+        addNoteCard.style.display = 'none';
+    }
+}
+
+const dropdownMenus = document.querySelectorAll('.reply-note-dropdown-menu');
+dropdownMenus.forEach(menu => {
+    menu.addEventListener('click', handleDropdownClick);
+});
+
+//Recipient Tag
+const toggleLinks = document.querySelectorAll(".toggle-recipient");
+const recipientTag = document.querySelector(".recipient-tag");
+
+toggleLinks.forEach(link => {
+    link.addEventListener("click", function (event) {
+        event.preventDefault();
+        recipientTag.classList.toggle("d-none");
     });
 });

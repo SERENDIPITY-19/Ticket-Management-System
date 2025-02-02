@@ -5,7 +5,7 @@
     <h4 class="mb-4">Ticket / Ticket Details</h4>
     <div class="row g-4">
         <div class="col-md-8">
-            <div class="card p-4">
+            <div class="card ticket-details-card p-4">
                 <div class="d-flex align-items-center">
                     <div>
                         <h5 class="mb-4 fw-bold">Ticket Title</h5>
@@ -79,8 +79,8 @@
                     </button>
                 </div>
                 <hr />
-                <div class="email-container m-3">
-                    <div class="row justify-content-start mb-4">
+                <div class="email-container">
+                    <div class="row justify-content-start mb-4 mx-0">
                         <div class="customer-email d-flex col-10">
                             <div class="align-self-end me-2">
                                 <img src="~/images/user.png" alt="Customer" />
@@ -102,9 +102,9 @@
                             </div>
                         </div>
                     </div>
-                    <div class="row justify-content-end mt-4">
+                    <div class="row justify-content-end mt-4 mx-0">
                         <div class="support-email d-flex col-10">
-                            <div class="card support-email-card p-3">
+                            <div class="card support-email-card p-3 flex-grow-1">
                                 <div class="d-flex align-items-center">
                                     <div>
                                         <span class="fw-bold">Roger Smith</span>
@@ -125,9 +125,9 @@
                             </div>
                         </div>
                     </div>
-                    <div class="row justify-content-end mt-4">
+                    <div class="row justify-content-end mt-4 mx-0">
                         <div class="support-email d-flex col-10">
-                            <div class="card support-email-card p-3">
+                            <div class="card support-email-card p-3 flex-grow-1">
                                 <div class="d-flex align-items-center">
                                     <div>
                                         <span class="fw-bold">Roger Smith</span>
@@ -148,9 +148,9 @@
                             </div>
                         </div>
                     </div>
-                    <div class="row justify-content-end mt-4">
+                    <div class="row justify-content-end mt-4 mx-0">
                         <div class="support-email d-flex col-10">
-                            <div class="card support-email-card p-3">
+                            <div class="card support-email-card p-3 flex-grow-1">
                                 <div class="d-flex align-items-center">
                                     <div>
                                         <span class="fw-bold">Roger Smith</span>
@@ -171,7 +171,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="row justify-content-start mt-4">
+                    <div class="row justify-content-start mt-4 mx-0">
                         <div class="customer-email d-flex col-10">
                             <div class="align-self-end me-2">
                                 <img src="~/images/user.png" alt="Customer" />
@@ -193,7 +193,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="row justify-content-start mt-4">
+                    <div class="row justify-content-start mt-4 mx-0">
                         <div class="customer-email d-flex col-10">
                             <div class="align-self-end me-2">
                                 <img src="~/images/user.png" alt="Customer" />
@@ -215,7 +215,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="row justify-content-start mt-4">
+                    <div class="row justify-content-start mt-4 mx-0">
                         <div class="customer-email d-flex col-10">
                             <div class="align-self-end me-2">
                                 <img src="~/images/user.png" alt="Customer" />
@@ -237,9 +237,9 @@
                             </div>
                         </div>
                     </div>
-                    <div class="row justify-content-end mt-4">
+                    <div class="row justify-content-end mt-4 mx-0">
                         <div class="support-email d-flex col-10">
-                            <div class="card support-email-card p-3">
+                            <div class="card support-email-card p-3 flex-grow-1">
                                 <div class="d-flex align-items-center">
                                     <div>
                                         <span class="fw-bold">Roger Smith</span>
@@ -260,9 +260,9 @@
                             </div>
                         </div>
                     </div>
-                    <div class="row justify-content-end mt-4">
+                    <div class="row justify-content-end my-4 mx-0">
                         <div class="support-note d-flex col-10">
-                            <div class="card support-note-card p-3">
+                            <div class="card support-note-card p-3 flex-grow-1">
                                 <div class="d-flex align-items-center">
                                     <div>
                                         <span class="fw-bold">Roger Smith</span>
@@ -271,7 +271,7 @@
                                 </div>
                                 <hr />
                                 <div>
-                                    This is the notes where agent support of the company can add any notes...
+                                    This is the notes...
                                 </div>
                                 <div class="text-muted ms-auto">•Today at 22:05</div>
                             </div>
@@ -281,33 +281,47 @@
                         </div>
                     </div>
                 </div>
+                <hr class="my-2" />
                 <div class="email-reply card p-2 mt-3">
                     <div class="d-flex align-items-center mb-2 gap-3">
-                        <div class="dropdown">
-                            <button class="btn d-flex align-items-center dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                <i class="fa-regular fa-message me-1"></i>
-                                <span>Reply</span>
-                            </button>
-                            <ul class="dropdown-menu">
-                                <li>
-                                    <button class="dropdown-item" type="button">
-                                        <i class="fa-regular fa-message"></i>
-                                        <span>Reply</span>
-                                    </button>
-                                </li>
-                                <li>
-                                    <button class="dropdown-item" type="button">
-                                        <i class="fa-regular fa-pen-to-square"></i>
-                                        <span>Note</span>
-                                    </button>
-                                </li>
-                            </ul>
+                        <div>
+                            <div class="dropdown">
+                                <button class="btn d-flex align-items-center dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <i class="fa-regular fa-message me-1"></i>
+                                    <span>Reply</span>
+                                </button>
+                                <ul class="dropdown-menu reply-note-dropdown-menu">
+                                    <li>
+                                        <button class="dropdown-item reply-note-dropdown-item" type="button">
+                                            <i class="fa-regular fa-message"></i>
+                                            <span class="reply-note-title">Reply</span>
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button class="dropdown-item reply-note-dropdown-item" type="button">
+                                            <i class="fa-regular fa-pen-to-square"></i>
+                                            <span class="reply-note-title">Note</span>
+                                        </button>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="recipient-tag d-none">
+                                <div class="d-flex align-items-center bg-light px-2 border">
+                                    <span class="me-2 fw-bold">To</span>
+                                    <span>Ana(ana@gmail.com)</span>
+                                </div>
+                                <div class="d-flex align-items-center bg-light px-2 border">
+                                    <span class="me-2 fw-bold">CC</span>
+                                    <span>test(test@gmail.com)</span>
+                                    <button type="button" class="btn-close ms-2" aria-label="Remove"></button>
+                                </div>
+                            </div>
                         </div>
                         <div>
-                            <a href="#" class="text-decoration-none"> Ana and 1 more</a>
+                            <a href="#" class="text-decoration-none toggle-recipient"> Ana and 1 more</a>
                         </div>
                         <div class="ms-auto me-2 text-secondary">
-                            <a href="#">CC</a>
+                            <a href="#" class="toggle-recipient">CC</a>
                         </div>
                     </div>
                     <textarea class="form-control my-2 p-2" rows="7" placeholder="Type your message here..."></textarea>
@@ -334,17 +348,17 @@
                             <i class="fa-regular fa-pen-to-square me-1"></i>
                             <span>Note</span>
                         </button>
-                        <ul class="dropdown-menu">
+                        <ul class="dropdown-menu reply-note-dropdown-menu">
                             <li>
-                                <button class="dropdown-item" type="button">
+                                <button class="dropdown-item reply-note-dropdown-item" type="button">
                                     <i class="fa-regular fa-message"></i>
-                                    <span>Reply</span>
+                                    <span class="reply-note-title">Reply</span>
                                 </button>
                             </li>
                             <li>
-                                <button class="dropdown-item" type="button">
+                                <button class="dropdown-item reply-note-dropdown-item" type="button">
                                     <i class="fa-regular fa-pen-to-square"></i>
-                                    <span>Note</span>
+                                    <span class="reply-note-title">Note</span>
                                 </button>
                             </li>
                         </ul>
