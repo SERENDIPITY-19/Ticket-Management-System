@@ -2,7 +2,7 @@
     ViewData["Title"] = "View Tickets";
 }
 <div class="container my-4">
-    <h2 class="mb-4">Ticket/Ticket Details</h2>
+    <h4 class="mb-4">Ticket / Ticket Details</h4>
     <div class="row g-4">
         <div class="col-md-8">
             <div class="card p-4">
@@ -40,23 +40,23 @@
                     <div class="d-flex align-items-center ms-auto gap-2">
                         <span class="badge text-black bg-light border">Ticket #22</span>
                         <div class="dropdown">
-                            <button class="btn bg-light border" id="StatusDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                            <button class="btn bg-light border" id="StatusDropdown" title="Ticket Status" data-bs-toggle="dropdown" aria-expanded="false">
                                 <i class="fa-regular fa-circle ticket-open"></i>
                             </button>
                             <ul class="dropdown-menu" id="statusList">
-                                <li><button class="dropdown-item"><i class="fa-regular fa-circle ticket-open"></i> Open</button></li>
-                                <li><button class="dropdown-item"><i class="fa-solid fa-clock ticket-in-progress"></i> In Progress</button></li>
-                                <li><button class="dropdown-item"><i class="fa-solid fa-pause ticket-on-hold"></i> On Hold</button></li>
-                                <li><button class="dropdown-item"><i class="fa-solid fa-hourglass-half ticket-pending"></i> Pending</button></li>
-                                <li><button class="dropdown-item"><i class="fa-regular fa-check-circle ticket-resolved"></i> Resolved</button></li>
-                                <li><button class="dropdown-item"><i class="fa-solid fa-lock ticket-closed"></i> Closed</button></li>
-                                <li><button class="dropdown-item"><i class="fa-solid fa-arrow-rotate-left ticket-reopened"></i> Reopened</button></li>
-                                <li><button class="dropdown-item"><i class="fa-solid fa-angles-up ticket-escalated"></i> Escalated</button></li>
-                                <li><button class="dropdown-item"><i class="fa-solid fa-times-circle ticket-rejected"></i> Rejected</button></li>
+                                <li><button class="dropdown-item" type="button"><i class="fa-regular fa-circle ticket-open"></i> Open</button></li>
+                                <li><button class="dropdown-item" type="button"><i class="fa-solid fa-clock ticket-in-progress"></i> In Progress</button></li>
+                                <li><button class="dropdown-item" type="button"><i class="fa-solid fa-pause ticket-on-hold"></i> On Hold</button></li>
+                                <li><button class="dropdown-item" type="button"><i class="fa-solid fa-hourglass-half ticket-pending"></i> Pending</button></li>
+                                <li><button class="dropdown-item" type="button"><i class="fa-regular fa-check-circle ticket-resolved"></i> Resolved</button></li>
+                                <li><button class="dropdown-item" type="button"><i class="fa-solid fa-lock ticket-closed"></i> Closed</button></li>
+                                <li><button class="dropdown-item" type="button"><i class="fa-solid fa-arrow-rotate-left ticket-reopened"></i> Reopened</button></li>
+                                <li><button class="dropdown-item" type="button"><i class="fa-solid fa-angles-up ticket-escalated"></i> Escalated</button></li>
+                                <li><button class="dropdown-item" type="button"><i class="fa-solid fa-times-circle ticket-rejected"></i> Rejected</button></li>
                             </ul>
                         </div>
                         <div class="dropdown">
-                            <button class="btn" id="TicketDetailsDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                            <button class="btn" type="button" id="TicketDetailsDropdown" data-bs-toggle="dropdown" aria-expanded="false">
                                 <i class="fa-solid fa-ellipsis-vertical text-black"></i>
                             </button>
                             <ul class="dropdown-menu">
@@ -74,7 +74,7 @@
                             This is the description and if it is too long, it will hide the overflow and indicate the overflow with an ellipsis and when you click the button just right to this description, it will expand the container and you will be able to see the whole text.
                         </p>
                     </div>
-                    <button class="btn expand-btn" data-bs-toggle="collapse" data-bs-target="#collapseText" aria-expanded="false" aria-controls="collapseText">
+                    <button class="btn expand-btn" type="button" data-bs-toggle="collapse" data-bs-target="#collapseText" aria-expanded="false" aria-controls="collapseText">
                         <i class="fa-solid fa-up-right-and-down-left-from-center"></i>
                     </button>
                 </div>
@@ -281,6 +281,91 @@
                         </div>
                     </div>
                 </div>
+                <div class="email-reply card p-2 mt-3">
+                    <div class="d-flex align-items-center mb-2 gap-3">
+                        <div class="dropdown">
+                            <button class="btn d-flex align-items-center dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="fa-regular fa-message me-1"></i>
+                                <span>Reply</span>
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <button class="dropdown-item" type="button">
+                                        <i class="fa-regular fa-message"></i>
+                                        <span>Reply</span>
+                                    </button>
+                                </li>
+                                <li>
+                                    <button class="dropdown-item" type="button">
+                                        <i class="fa-regular fa-pen-to-square"></i>
+                                        <span>Note</span>
+                                    </button>
+                                </li>
+                            </ul>
+                        </div>
+                        <div>
+                            <a href="#" class="text-decoration-none"> Ana and 1 more</a>
+                        </div>
+                        <div class="ms-auto me-2 text-secondary">
+                            <a href="#">CC</a>
+                        </div>
+                    </div>
+                    <textarea class="form-control my-2 p-2" rows="7" placeholder="Type your message here..."></textarea>
+                    <div class="d-flex align-items-center justify-content-between">
+                        <div class="d-flex">
+                            <button class="btn" type="button">
+                                <i class="fa-regular fa-face-smile"></i>
+                            </button>
+                            <button class="btn" type="button">
+                                <i class="fa-solid fa-paperclip"></i>
+                            </button>
+                        </div>
+                        <div>
+                            <img src="~/images/sendandclose.png" />
+                            <button class="btn btn-primary ms-2">
+                                Send
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="add-note support-note-card card p-2 mt-3">
+                    <div class="dropdown mb-2">
+                        <button class="btn d-flex align-items-center dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fa-regular fa-pen-to-square me-1"></i>
+                            <span>Note</span>
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <button class="dropdown-item" type="button">
+                                    <i class="fa-regular fa-message"></i>
+                                    <span>Reply</span>
+                                </button>
+                            </li>
+                            <li>
+                                <button class="dropdown-item" type="button">
+                                    <i class="fa-regular fa-pen-to-square"></i>
+                                    <span>Note</span>
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+                    <textarea class="form-control my-2 p-2" rows="7" placeholder="Type your note here..."></textarea>
+                    <div class="d-flex align-items-center justify-content-between">
+                        <div class="d-flex">
+                            <button class="btn" type="button">
+                                <i class="fa-regular fa-face-smile"></i>
+                            </button>
+                            <button class="btn" type="button">
+                                <i class="fa-solid fa-paperclip"></i>
+                            </button>
+                        </div>
+                        <div>
+                            <button class="btn btn-primary ms-2">
+                                Add Note
+                            </button>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="col-md-4">
@@ -412,11 +497,34 @@
                                 </ul>
                             </div>
                         </div>
+                        <div class="mb-3">
+                            <label for="tags" class="form-label">
+                                <i class="fa-solid fa-tags"></i>
+                                <span>Tags</span>
+                            </label>
+                            <div class="border rounded p-2">
+                                <div class="d-flex flex-wrap gap-2">
+                                    <span class="badge bg-light text-dark border">
+                                        Problem <button type="button" class="btn-close ms-1" aria-label="Remove"></button>
+                                    </span>
+                                    <span class="badge bg-light text-dark border">
+                                        Login <button type="button" class="btn-close ms-1" aria-label="Remove"></button>
+                                    </span>
+                                    <span class="badge bg-light text-dark border">
+                                        Report <button type="button" class="btn-close ms-1" aria-label="Remove"></button>
+                                    </span>
+                                    <span class="badge bg-light text-dark border">
+                                        LineItems <button type="button" class="btn-close ms-1" aria-label="Remove"></button>
+                                    </span>
+                                    <span class="badge bg-light text-dark border">
+                                        Server <button type="button" class="btn-close ms-1" aria-label="Remove"></button>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-
                 </div>
             </div>
-
         </div>
     </div>
 </div>

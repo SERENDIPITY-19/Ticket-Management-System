@@ -2,9 +2,9 @@
     ViewData["Title"] = "All Tickets";
 }
 <div class="container my-4">
-    <h4 class="my-3"> All Tickets</h4>
+    <h4 class="my-3">All Tickets</h4>
     <div class="d-flex gap-3">
-        <button class="btn btn-outline-primary d-flex align-items-center gap-2">
+        <button class="btn btn-outline-primary d-flex align-items-center gap-2" type="button">
             <i class="fa-solid fa-sliders"></i> Filter
         </button>
         <div class="border" id="ticketActions">
@@ -19,7 +19,7 @@
                     <i class="fa-solid fa-trash me-1"></i>
                     <span>Delete</span>
                 </a>
-                <button class="btn text-danger text-decoration-none ms-auto ticket-cancel-btn">
+                <button class="btn text-danger text-decoration-none ms-auto ticket-cancel-btn" type="button">
                     <i class="fa-solid fa-xmark me-1"></i>
                     <span>Cancel</span>
                 </button>
@@ -43,7 +43,7 @@
                 <tbody>
                     <tr>
                         <td><input type="checkbox" class="ticket-checkbox"></td>
-                        <td><span class="badge-status badge-new"><i class="fa-solid fa-user-plus me-2"></i>New</span></td>
+                        <td><span class="badge badge-new"><i class="fa-solid fa-user-plus me-2"></i>New</span></td>
                         <td>
                             <a asp-controller="Tickets" asp-action="ViewTickets">
                                 Report not working
@@ -56,7 +56,7 @@
                     </tr>
                     <tr>
                         <td><input type="checkbox" class="ticket-checkbox"></td>
-                        <td><span class="badge-status badge-onhold"><i class="fa-solid fa-pause me-2"></i>On Hold</span></td>
+                        <td><span class="badge badge-onhold"><i class="fa-solid fa-pause me-2"></i>On Hold</span></td>
                         <td>Error in line item</td>
                         <td>Bryan</td>
                         <td>3 days ago</td>
@@ -65,7 +65,7 @@
                     </tr>
                     <tr>
                         <td><input type="checkbox" class="ticket-checkbox"></td>
-                        <td><span class="badge-status badge-inprogress"><i class="fa-solid fa-clock me-2"></i>In Progress</span></td>
+                        <td><span class="badge badge-inprogress"><i class="fa-solid fa-clock me-2"></i>In Progress</span></td>
                         <td>Student details</td>
                         <td>Bryan</td>
                         <td>3 days ago</td>
@@ -74,7 +74,7 @@
                     </tr>
                     <tr>
                         <td><input type="checkbox" class="ticket-checkbox"></td>
-                        <td><span class="badge-status badge-new"><i class="fa-solid fa-user-plus me-2"></i>New</span></td>
+                        <td><span class="badge badge-new"><i class="fa-solid fa-user-plus me-2"></i>New</span></td>
                         <td>Student details</td>
                         <td>Bryan</td>
                         <td>3 days ago</td>
