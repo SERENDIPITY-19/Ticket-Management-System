@@ -324,7 +324,18 @@
                             <a href="#" class="toggle-recipient">CC</a>
                         </div>
                     </div>
-                    <textarea class="form-control my-2 p-2" rows="7" placeholder="Type your message here..."></textarea>
+                    <div class="btn-toolbar mb-1" role="toolbar" aria-label="Editor toolbar">
+                        <div class="btn-group" role="group" aria-label="Formatting options">
+                            <button type="button" class="btn btn-outline-secondary">H</button>
+                            <button type="button" class="btn btn-outline-secondary" title="Bold"><b>B</b></button>
+                            <button type="button" class="btn btn-outline-secondary" title="Italic"><i>I</i></button>
+                            <button type="button" class="btn btn-outline-secondary" title="Underline"><u>U</u></button>
+                            <button type="button" class="btn btn-outline-secondary"><u>A</u></button>
+                            <button type="button" class="btn btn-outline-secondary" title="Code"><i class="fa-solid fa-code"></i></button>
+                            <button type="button" class="btn btn-outline-secondary" title="Link"><i class="fa-solid fa-link"></i></button>
+                        </div>
+                    </div>
+                    <textarea class="form-control mb-2 p-2" rows="7" placeholder="Type your message here..."></textarea>
                     <div class="d-flex align-items-center justify-content-between">
                         <div class="d-flex">
                             <button class="btn" type="button">
@@ -335,10 +346,22 @@
                             </button>
                         </div>
                         <div>
-                            <img src="~/images/sendandclose.png" />
-                            <button class="btn btn-primary ms-2">
-                                Send
-                            </button>
+                            <button class="btn" title="Send and Close tab"><img src="~/images/sendandclose.png" /></button>
+                            <div class="btn-group">
+                                <button class="btn btn-primary ms-2">
+                                    Send
+                                </button>
+                                <div class="vr"></div>
+                                <button type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false"></button>
+                                <ul class="dropdown-menu">
+                                    <li>
+                                        <div class="d-flex align-items-center input-group enter-link py-1 px-2">
+                                            <input type="text" class="form-control" placeholder="Enter a link" />
+                                            <button type="button" class="btn-close ms-1"></button>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -363,7 +386,18 @@
                             </li>
                         </ul>
                     </div>
-                    <textarea class="form-control my-2 p-2" rows="7" placeholder="Type your note here..."></textarea>
+                    <div class="btn-toolbar mb-1" role="toolbar" aria-label="Editor toolbar">
+                        <div class="btn-group" role="group" aria-label="Formatting options">
+                            <button type="button" class="btn btn-outline-secondary">H</button>
+                            <button type="button" class="btn btn-outline-secondary" title="Bold"><b>B</b></button>
+                            <button type="button" class="btn btn-outline-secondary" title="Italic"><i>I</i></button>
+                            <button type="button" class="btn btn-outline-secondary" title="Underline"><u>U</u></button>
+                            <button type="button" class="btn btn-outline-secondary"><u>A</u></button>
+                            <button type="button" class="btn btn-outline-secondary" title="Code"><i class="fa-solid fa-code"></i></button>
+                            <button type="button" class="btn btn-outline-secondary" title="Link"><i class="fa-solid fa-link"></i></button>
+                        </div>
+                    </div>
+                    <textarea class="form-control mb-2 p-2" rows="7" placeholder="Type your note here..."></textarea>
                     <div class="d-flex align-items-center justify-content-between">
                         <div class="d-flex">
                             <button class="btn" type="button">
@@ -474,14 +508,12 @@
                                     <i class="fa-solid fa-user me-1"></i>
                                     <span>Assignee</span>
                                 </label>
-
                                 <button class="btn border w-100 dropdown-toggle d-flex align-items-center justify-content-between" type="button" id="assigneeDropdown" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">
                                     <div class="d-flex align-items-center">
                                         <i class="fa-solid fa-user-circle me-2"></i>
                                         <span class="selected-text">Select Assignee</span>
                                     </div>
                                 </button>
-
                                 <ul class="dropdown-menu w-100 p-0" aria-labelledby="assigneeDropdown">
                                     <li>
                                         <div class="dropdown-header border-bottom">Groups</div>
