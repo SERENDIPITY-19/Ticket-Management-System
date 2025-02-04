@@ -9,7 +9,7 @@
                 <div class="d-flex align-items-center">
                     <div>
                         <h5 class="mb-4 fw-bold">Ticket Title</h5>
-                        <div class="d-flex align-items-center">
+                        <div class="d-flex flex-column flex-md-row align-items-center">
                             <div class="dropdown severity-dropdown me-2">
                                 <span class="me-1">Severity:</span>
                                 <button class="btn badge severity-badge severity-minor dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -90,7 +90,7 @@
                                     <div>
                                         <span class="fw-bold">Ana Olivia</span>
                                         <i class="fa-regular fa-envelope"></i>
-                                        <div class="text-muted">To: support@replsolutions.com</div>
+                                        <div class="text-muted mail-address">To: support@replsolutions.com</div>
                                     </div>
                                 </div>
                                 <hr />
@@ -109,7 +109,7 @@
                                     <div>
                                         <span class="fw-bold">Roger Smith</span>
                                         <i class="fa-solid fa-reply"></i>
-                                        <div class="text-muted">To: anaolivia@gmail.com</div>
+                                        <div class="text-muted mail-address">To: anaolivia@gmail.com</div>
                                     </div>
                                 </div>
                                 <hr />
@@ -132,7 +132,7 @@
                                     <div>
                                         <span class="fw-bold">Roger Smith</span>
                                         <i class="fa-solid fa-reply"></i>
-                                        <div class="text-muted">To: anaolivia@gmail.com</div>
+                                        <div class="text-muted mail-address">To: anaolivia@gmail.com</div>
                                     </div>
                                 </div>
                                 <hr />
@@ -155,7 +155,7 @@
                                     <div>
                                         <span class="fw-bold">Roger Smith</span>
                                         <i class="fa-solid fa-reply"></i>
-                                        <div class="text-muted">To: anaolivia@gmail.com</div>
+                                        <div class="text-muted mail-address">To: anaolivia@gmail.com</div>
                                     </div>
                                 </div>
                                 <hr />
@@ -181,7 +181,7 @@
                                     <div>
                                         <span class="fw-bold">Ana Olivia</span>
                                         <i class="fa-regular fa-envelope"></i>
-                                        <div class="text-muted">To: support@replsolutions.com</div>
+                                        <div class="text-muted mail-address">To: support@replsolutions.com</div>
                                     </div>
                                 </div>
                                 <hr />
@@ -203,7 +203,7 @@
                                     <div>
                                         <span class="fw-bold">Ana Olivia</span>
                                         <i class="fa-regular fa-envelope"></i>
-                                        <div class="text-muted">To: support@replsolutions.com</div>
+                                        <div class="text-muted mail-address">To: support@replsolutions.com</div>
                                     </div>
                                 </div>
                                 <hr />
@@ -225,7 +225,7 @@
                                     <div>
                                         <span class="fw-bold">Ana Olivia</span>
                                         <i class="fa-regular fa-envelope"></i>
-                                        <div class="text-muted">To: support@replsolutions.com</div>
+                                        <div class="text-muted mail-address">To: support@replsolutions.com</div>
                                     </div>
                                 </div>
                                 <hr />
@@ -244,7 +244,7 @@
                                     <div>
                                         <span class="fw-bold">Roger Smith</span>
                                         <i class="fa-solid fa-reply"></i>
-                                        <div class="text-muted">To: anaolivia@gmail.com</div>
+                                        <div class="text-muted mail-address">To: anaolivia@gmail.com</div>
                                     </div>
                                 </div>
                                 <hr />
@@ -426,22 +426,22 @@
                     </div>
                     <hr />
                     <div class="d-flex flex-column gap-2">
-                        <div class="d-flex align-items-center">
+                        <div class="d-flex flex-wrap align-items-center">
                             <i class="fa-solid fa-circle-user me-2"></i>
                             <span class="fw-bold">Name</span>
                             <span class="ms-auto">Ana Olivia</span>
                         </div>
-                        <div class="d-flex align-items-center">
+                        <div class="d-flex flex-wrap align-items-center">
                             <i class="fa-solid fa-envelope me-2"></i>
                             <span class="fw-bold">Email</span>
                             <span class="ms-auto">ana@gmail.com</span>
                         </div>
-                        <div class="d-flex align-items-center">
+                        <div class="d-flex flex-wrap align-items-center">
                             <i class="fa-solid fa-phone me-2"></i>
                             <span class="fw-bold">Phone</span>
                             <span class="ms-auto">+977 - 9812345678</span>
                         </div>
-                        <div class="d-flex align-items-center">
+                        <div class="d-flex flex-wrap align-items-center">
                             <i class="fa-solid fa-location-dot me-2"></i>
                             <span class="fw-bold">Address</span>
                             <span class="ms-auto">Kathmandu</span>
@@ -470,7 +470,7 @@
                                 </button>
                                 <ul class="dropdown-menu w-100 p-0" aria-labelledby="requesterDropdown">
                                     <li class="p-2 border-bottom">
-                                        <input type="text" class="form-control" placeholder="Search name or contact info" id="searchInput" />
+                                        <input type="text" class="form-control" placeholder="Search name or contact info" title="Search name or contact info" id="searchInput" />
                                     </li>
                                     <li>
                                         <button type="button" class="dropdown-item d-flex align-items-center" data-value="Ana Olivia">
@@ -516,7 +516,7 @@
                                     <li>
                                         <div class="dropdown-header border-bottom">Groups</div>
                                     </li>
-                                    <li class="dropdown dropend">
+                                    <li class="dropdown">
                                         <button class="dropdown-item d-flex align-items-center justify-content-between" type="button" data-bs-toggle="dropdown">
                                             <span><i class="fa-solid fa-users me-2"></i>Support</span>
                                             <i class="fa-solid fa-chevron-right ms-2"></i>
@@ -527,7 +527,7 @@
                                             <li><button class="dropdown-item" type="button" onclick="updateAssignee(this)">Hari</button></li>
                                         </ul>
                                     </li>
-                                    <li class="dropdown dropend">
+                                    <li class="dropdown">
                                         <button class="dropdown-item d-flex align-items-center justify-content-between" type="button" data-bs-toggle="dropdown">
                                             <span><i class="fa-solid fa-users me-2"></i>Marketing</span>
                                             <i class="fa-solid fa-chevron-right ms-2"></i>

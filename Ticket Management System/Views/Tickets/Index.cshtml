@@ -1,13 +1,13 @@
 ﻿@{
     ViewData["Title"] = "All Tickets";
 }
-<div class="container my-4">
+<div class="container tables-container my-4">
     <h4 class="my-3">All Tickets</h4>
-    <div class="d-flex gap-3">
+    <div class="d-flex flex-column flex-md-row gap-3">
         <button class="btn btn-outline-primary d-flex align-items-center gap-2" type="button">
             <i class="fa-solid fa-sliders"></i> Filter
         </button>
-        <div class="border" id="ticketActions">
+        <div class="border w-100 w-md-auto" id="ticketActions">
             <div class="d-flex align-items-center ticket-actions">
                 <span class="fw-bold ms-2 me-4">1 ticket</span>
                 <a href="#" class="text-black text-decoration-none">
@@ -28,61 +28,63 @@
     </div>
     <div class="card mt-3">
         <div class="card-body p-0">
-            <table class="table table-hover mb-0">
-                <thead>
-                    <tr class="card-header">
-                        <th scope="col"><input type="checkbox" id="selectAll"></th>
-                        <th scope="col">Ticket Status</th>
-                        <th scope="col">Subject</th>
-                        <th scope="col">Requester</th>
-                        <th scope="col">Requested</th>
-                        <th scope="col">Type</th>
-                        <th scope="col">Assignee</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><input type="checkbox" class="ticket-checkbox"></td>
-                        <td><span class="badge badge-new"><i class="fa-solid fa-user-plus me-2"></i>New</span></td>
-                        <td>
-                            <a asp-controller="Tickets" asp-action="ViewTickets">
-                                Report not working
-                            </a>
-                        </td>
-                        <td>Bryan</td>
-                        <td>3 days ago</td>
-                        <td>Ticket Status</td>
-                        <td><img src="~/images/user.png" alt="Assignee"></td>
-                    </tr>
-                    <tr>
-                        <td><input type="checkbox" class="ticket-checkbox"></td>
-                        <td><span class="badge badge-onhold"><i class="fa-solid fa-pause me-2"></i>On Hold</span></td>
-                        <td>Error in line item</td>
-                        <td>Bryan</td>
-                        <td>3 days ago</td>
-                        <td>Ticket Status</td>
-                        <td><img src="~/images/user.png" alt="Assignee"></td>
-                    </tr>
-                    <tr>
-                        <td><input type="checkbox" class="ticket-checkbox"></td>
-                        <td><span class="badge badge-inprogress"><i class="fa-solid fa-clock me-2"></i>In Progress</span></td>
-                        <td>Student details</td>
-                        <td>Bryan</td>
-                        <td>3 days ago</td>
-                        <td>Ticket Status</td>
-                        <td><img src="~/images/user.png" alt="Assignee"></td>
-                    </tr>
-                    <tr>
-                        <td><input type="checkbox" class="ticket-checkbox"></td>
-                        <td><span class="badge badge-new"><i class="fa-solid fa-user-plus me-2"></i>New</span></td>
-                        <td>Student details</td>
-                        <td>Bryan</td>
-                        <td>3 days ago</td>
-                        <td>Ticket Status</td>
-                        <td><img src="~/images/user.png" alt="Assignee"></td>
-                    </tr>
-                </tbody>
-            </table>
+            <div class="table-responsive">
+                <table class="table table-hover mb-0">
+                    <thead>
+                        <tr class="card-header">
+                            <th scope="col"><input type="checkbox" id="selectAll"></th>
+                            <th scope="col">Ticket Status</th>
+                            <th scope="col">Subject</th>
+                            <th scope="col">Requester</th>
+                            <th scope="col">Requested</th>
+                            <th scope="col">Type</th>
+                            <th scope="col">Assignee</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><input type="checkbox" class="ticket-checkbox"></td>
+                            <td><span class="badge badge-new"><i class="fa-solid fa-user-plus me-2"></i>New</span></td>
+                            <td>
+                                <a asp-controller="Tickets" asp-action="ViewTickets">
+                                    Report not working
+                                </a>
+                            </td>
+                            <td>Bryan</td>
+                            <td>3 days ago</td>
+                            <td>Ticket Status</td>
+                            <td><img src="~/images/user.png" alt="Assignee"></td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" class="ticket-checkbox"></td>
+                            <td><span class="badge badge-onhold"><i class="fa-solid fa-pause me-2"></i>On Hold</span></td>
+                            <td>Error in line item</td>
+                            <td>Bryan</td>
+                            <td>3 days ago</td>
+                            <td>Ticket Status</td>
+                            <td><img src="~/images/user.png" alt="Assignee"></td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" class="ticket-checkbox"></td>
+                            <td><span class="badge badge-inprogress"><i class="fa-solid fa-clock me-2"></i>In Progress</span></td>
+                            <td>Student details</td>
+                            <td>Bryan</td>
+                            <td>3 days ago</td>
+                            <td>Ticket Status</td>
+                            <td><img src="~/images/user.png" alt="Assignee"></td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" class="ticket-checkbox"></td>
+                            <td><span class="badge badge-new"><i class="fa-solid fa-user-plus me-2"></i>New</span></td>
+                            <td>Student details</td>
+                            <td>Bryan</td>
+                            <td>3 days ago</td>
+                            <td>Ticket Status</td>
+                            <td><img src="~/images/user.png" alt="Assignee"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
     </div>
 </div>

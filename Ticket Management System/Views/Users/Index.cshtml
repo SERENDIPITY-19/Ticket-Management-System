@@ -1,7 +1,7 @@
 ﻿@{
     ViewData["Title"] = "Users";
 }
-<div class="container my-4">
+<div class="container tables-container my-4">
     <div class="d-flex justify-content-between align-items-center mb-3 mt-3">
         <div>
             <h4>Users</h4>
@@ -13,57 +13,59 @@
         <span class="input-group-text"><i class="fa-solid fa-magnifying-glass"></i></span>
         <input type="text" class="form-control" placeholder="Search Users" />
     </div>
-    <table class="table table-hover">
-        <thead class="table-light">
-            <tr>
-                <th scope="col"><input type="checkbox"></th>
-                <th scope="col">Name</th>
-                <th scope="col">Email</th>
-                <th scope="col">Phone</th>
-                <th scope="col">Source</th>
-                <th scope="col">Customer Type</th>
-                <th scope="col">Last Active</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td><input type="checkbox"></td>
-                <td>
-                    <img src="~/images/user.png" alt="Profile">
-                    <a asp-controller="Users" asp-action="Details">Bryan</a>
-                </td>
-                <td>bryan@gmail.com</td>
-                <td>---</td>
-                <td>Website</td>
-                <td>Individual</td>
-                <td>5 days ago</td>
-            </tr>
-            <tr>
-                <td><input type="checkbox"></td>
-                <td>
-                    <img src="~/images/user.png" alt="Profile">
-                    <a class="text-decoration-none text-black" href="#">Ana</a>
-                </td>
-                <td>ana@gmail.com</td>
-                <td>---</td>
-                <td>Website</td>
-                <td>Individual</td>
-                <td>5 days ago</td>
-            </tr>
-            <tr>
-                <td><input type="checkbox"></td>
-                <td>
-                    <img src="~/images/user.png" alt="Profile">
-                    <a class="text-decoration-none text-black" href="#">Ana</a>
-                </td>
-                <td>ana@gmail.com</td>
-                <td>---</td>
-                <td>Website</td>
-                <td>Individual</td>
-                <td>5 days ago</td>
-            </tr>
-        </tbody>
-    </table>
+    <div class="table-responsive">
+        <table class="table table-hover">
+            <thead class="table-light">
+                <tr>
+                    <th scope="col"><input type="checkbox"></th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Phone</th>
+                    <th scope="col">Source</th>
+                    <th scope="col">Customer Type</th>
+                    <th scope="col">Last Active</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><input type="checkbox"></td>
+                    <td>
+                        <img src="~/images/user.png" alt="Profile">
+                        <a asp-controller="Users" asp-action="Details">Bryan</a>
+                    </td>
+                    <td>bryan@gmail.com</td>
+                    <td>---</td>
+                    <td>Website</td>
+                    <td>Individual</td>
+                    <td>5 days ago</td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox"></td>
+                    <td>
+                        <img src="~/images/user.png" alt="Profile">
+                        <a class="text-decoration-none text-black" href="#">Ana</a>
+                    </td>
+                    <td>ana@gmail.com</td>
+                    <td>---</td>
+                    <td>Website</td>
+                    <td>Individual</td>
+                    <td>5 days ago</td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox"></td>
+                    <td>
+                        <img src="~/images/user.png" alt="Profile">
+                        <a class="text-decoration-none text-black" href="#">Ana</a>
+                    </td>
+                    <td>ana@gmail.com</td>
+                    <td>---</td>
+                    <td>Website</td>
+                    <td>Individual</td>
+                    <td>5 days ago</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 </div>
 
 <div class="modal fade" id="createUserModal" tabindex="-1" aria-labelledby="createUserModalLabel" aria-hidden="true">

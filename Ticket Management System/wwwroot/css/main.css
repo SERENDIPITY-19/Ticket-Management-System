@@ -36,6 +36,11 @@ body {
         font-size: 18px;
     }
 
+.dropdown-menu {
+    word-wrap: break-word;
+    overflow-wrap: anywhere;
+}
+
 .create-dropdown-menu {
     z-index: 1050;
 }
@@ -55,14 +60,6 @@ body {
     align-items: center;
     justify-content: center;
 }
-
-    .toggle-btn i {
-        transition: transform 0.3s ease;
-    }
-
-    .toggle-btn.collapsed i {
-        transform: rotate(180deg);
-    }
 
 /*Main Content*/
 /*Tickets*/
@@ -190,8 +187,12 @@ body {
     position: absolute;
     left: 0;
     bottom: 0;
-    width: 96%;
-    margin: 15px;
+}
+
+.requester-email, .mail-address {
+    white-space: normal;
+    word-wrap: break-word;
+    overflow-wrap: anywhere;
 }
 
 .vr {
@@ -246,16 +247,51 @@ body {
     .toggle-btn {
         position: fixed;
         left: 0px;
-        top: 70px;
+        top: 50px;
+        transform: rotate(180deg);
     }
 
         .toggle-btn.collapsed {
             left: 150px;
         }
+
+        .toggle-btn i {
+            transition: transform 0.3s ease;
+        }
+
+        .toggle-btn.collapsed i {
+            transform: rotate(180deg);
+        }
+
+    .create-ticket-redirect span {
+        display: none;
+    }
+
+    .table-responsive {
+        overflow-x: scroll;
+    }
+
+    .tables-container {
+        max-width: 400px;
+    }
+
+    .table {
+        min-width: 600px;
+        border-collapse: collapse;
+    }
+
+        .table th,
+        .table td {
+            white-space: nowrap;
+        }
 }
 
 /* Tablet View */
 @media (min-width: 768px) and (max-width: 1023px) {
+    .header {
+        padding: 15px;
+    }
+
     .navigation {
         position: fixed;
         height: 100vh;
@@ -275,12 +311,26 @@ body {
     .toggle-btn {
         position: fixed;
         left: 0px;
-        top: 70px;
+        top: 65px;
     }
 
         .toggle-btn.collapsed {
             left: 150px;
         }
+
+        .toggle-btn i {
+            transition: transform 0.3s ease;
+        }
+
+        .toggle-btn.collapsed i {
+            transform: rotate(180deg);
+        }
+
+    .email-reply,
+    .add-note {
+        width: 96%;
+        margin: 15px;
+    }
 }
 
 /* Desktop View */
@@ -290,6 +340,10 @@ body {
             "header header"
             "navigation content";
         grid-template-columns: auto 1fr;
+    }
+
+    .header {
+        padding: 15px;
     }
 
     .navigation {
@@ -316,4 +370,19 @@ body {
         .toggle-btn.collapsed {
             left: 90px;
         }
+
+
+        .toggle-btn i {
+            transition: transform 0.3s ease;
+        }
+
+        .toggle-btn.collapsed i {
+            transform: rotate(180deg);
+        }
+
+    .email-reply,
+    .add-note {
+        width: 96%;
+        margin: 15px;
+    }
 }
