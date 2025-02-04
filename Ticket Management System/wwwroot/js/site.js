@@ -7,7 +7,6 @@ toggleBtn.addEventListener('click', () => {
     toggleBtn.classList.toggle('collapsed');
 });
 
-
 //Ticket Actions
 document.addEventListener('DOMContentLoaded', () => {
     const ticketActions = document.getElementById("ticketActions");

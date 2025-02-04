@@ -8,36 +8,15 @@ body {
     display: grid;
     grid-template-areas:
         "header"
-        "content"
-        "navigation";
+        "content";
     grid-template-columns: auto;
-    grid-template-rows: auto 1fr auto;
+    grid-template-rows: auto 1fr;
     min-height: 100vh;
 }
 
-/* Tablet View */
-@media (min-width: 768px) and (max-width: 1023px) {
-    .layout-wrapper {
-        grid-template-areas:
-            "navigation header"
-            "navigation content";
-        grid-template-columns: auto 1fr;
+    .layout-wrapper > * {
+        padding: 0;
     }
-}
-
-/* Desktop View */
-@media (min-width: 1024px) {
-    .layout-wrapper {
-        grid-template-areas:
-            "header header"
-            "navigation content";
-        grid-template-columns: auto 1fr;
-    }
-}
-
-.layout-wrapper > * {
-    padding: 0;
-}
 
 /*Navbar*/
 .navbar-icon {
@@ -47,7 +26,6 @@ body {
     gap: 8px;
     cursor: pointer;
 }
-
 
     .navbar-icon i {
         width: 20px;
@@ -67,51 +45,16 @@ body {
         color: #6c757d;
     }
 
-.navigation {
-    padding: 15px;
-    width: 170px;
-    transition: width 0.3s ease;
-}
-
-    .navigation.collapsed {
-        width: 110px;
-    }
-
-        .navigation.collapsed .navbar-icon span,
-        .navigation.collapsed .create-button span {
-            display: none;
-        }
-
-.create-button {
-    border-radius: 0;
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 5px;
-}
-
-.options-button {
-    border-left-color: black;
-    border-radius: 0;
-    border-top-right-radius: 5px;
-    border-bottom-right-radius: 5px;
-}
-
 .toggle-btn {
-    position: absolute;
-    left: 150px;
-    top: 170px;
     width: 30px;
     height: 30px;
     cursor: pointer;
     transition: left 0.3s ease;
-    z-index: 1000;
+    z-index: 1001;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-
-    .toggle-btn.collapsed {
-        left: 90px;
-    }
 
     .toggle-btn i {
         transition: transform 0.3s ease;
@@ -120,26 +63,6 @@ body {
     .toggle-btn.collapsed i {
         transform: rotate(180deg);
     }
-
-@media (max-width: 767px) {
-    .navigation {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        align-items: center;
-        position: fixed;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        height: 50px;
-        z-index: 1000;
-    }
-
-    .navbar-title, .create-new, .toggle-btn {
-        display: none;
-    }
-}
-
 
 /*Main Content*/
 /*Tickets*/
@@ -300,4 +223,97 @@ body {
     height: 50px;
     border-radius: 50%;
     object-fit: cover;
+}
+
+/*Mobile View*/
+@media(max-width: 767px) {
+    .navigation {
+        position: fixed;
+        height: 100vh;
+        top: 0;
+        left: 0;
+        padding: 15px;
+        width: 170px;
+        transition: transform 0.3s ease;
+        transform: translateX(-100%);
+        z-index: 1000;
+    }
+
+        .navigation.collapsed {
+            transform: translateX(0);
+        }
+
+    .toggle-btn {
+        position: fixed;
+        left: 0px;
+        top: 70px;
+    }
+
+        .toggle-btn.collapsed {
+            left: 150px;
+        }
+}
+
+/* Tablet View */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .navigation {
+        position: fixed;
+        height: 100vh;
+        top: 0;
+        left: 0;
+        padding: 15px;
+        width: 170px;
+        transition: transform 0.3s ease;
+        transform: translateX(-100%);
+        z-index: 1000;
+    }
+
+        .navigation.collapsed {
+            transform: translateX(0);
+        }
+
+    .toggle-btn {
+        position: fixed;
+        left: 0px;
+        top: 70px;
+    }
+
+        .toggle-btn.collapsed {
+            left: 150px;
+        }
+}
+
+/* Desktop View */
+@media (min-width: 1024px) {
+    .layout-wrapper {
+        grid-template-areas:
+            "header header"
+            "navigation content";
+        grid-template-columns: auto 1fr;
+    }
+
+    .navigation {
+        padding: 15px;
+        width: 170px;
+        transition: width 0.3s ease;
+    }
+
+        .navigation.collapsed {
+            width: 110px;
+        }
+
+            .navigation.collapsed .navbar-icon span,
+            .navigation.collapsed .create-button span {
+                display: none;
+            }
+
+    .toggle-btn {
+        position: absolute;
+        left: 150px;
+        top: 170px;
+    }
+
+        .toggle-btn.collapsed {
+            left: 90px;
+        }
 }
