@@ -2,12 +2,15 @@
     ViewData["Title"] = "Users";
 }
 <div class="container tables-container my-4">
-    <div class="d-flex justify-content-between align-items-center mb-3 mt-3">
+    <div class="d-flex justify-content-between align-items-center">
         <div>
             <h4>Users</h4>
             <p class="text-muted">Manage your users efficiently—add, search, and organize them all from one location.</p>
         </div>
-        <button class="btn btn-primary ms-auto" type="button" asp-controller="Users" asp-action="Create" data-bs-toggle="modal" data-bs-target="#createUserModal">Add Customer</button>
+        <button class="btn btn-primary add-customer-btn ms-auto" type="button" asp-controller="Users" asp-action="Create" data-bs-toggle="modal" data-bs-target="#createUserModal">
+            <i class="fa-solid fa-plus"></i>
+            <span>Add Customer</span>
+        </button>
     </div>
     <div class="input-group mb-3">
         <span class="input-group-text"><i class="fa-solid fa-magnifying-glass"></i></span>
@@ -22,7 +25,7 @@
                     <th scope="col">Email</th>
                     <th scope="col">Phone</th>
                     <th scope="col">Source</th>
-                    <th scope="col">Customer Type</th>
+                    <th scope="col">User Type</th>
                     <th scope="col">Last Active</th>
                 </tr>
             </thead>
@@ -36,7 +39,7 @@
                     <td>bryan@gmail.com</td>
                     <td>---</td>
                     <td>Website</td>
-                    <td>Individual</td>
+                    <td>Agent</td>
                     <td>5 days ago</td>
                 </tr>
                 <tr>
@@ -48,7 +51,7 @@
                     <td>ana@gmail.com</td>
                     <td>---</td>
                     <td>Website</td>
-                    <td>Individual</td>
+                    <td>Customer</td>
                     <td>5 days ago</td>
                 </tr>
                 <tr>
@@ -60,7 +63,7 @@
                     <td>ana@gmail.com</td>
                     <td>---</td>
                     <td>Website</td>
-                    <td>Individual</td>
+                    <td>Agent</td>
                     <td>5 days ago</td>
                 </tr>
             </tbody>

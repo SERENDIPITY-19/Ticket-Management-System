@@ -263,7 +263,7 @@ body {
             transform: rotate(180deg);
         }
 
-    .create-ticket-redirect span {
+    .create-ticket-redirect span, .add-customer-btn span {
         display: none;
     }
 
@@ -312,6 +312,7 @@ body {
         position: fixed;
         left: 0px;
         top: 65px;
+        transform: rotate(180deg);
     }
 
         .toggle-btn.collapsed {
