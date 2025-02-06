@@ -14,13 +14,13 @@
     </div>
     <div class="input-group mb-3">
         <span class="input-group-text"><i class="fa-solid fa-magnifying-glass"></i></span>
-        <input type="text" class="form-control" placeholder="Search Users" />
+        <input type="text" class="form-control search-users" placeholder="Search Users" />
     </div>
     <div class="table-responsive">
         <table class="table table-hover">
             <thead class="table-light">
                 <tr>
-                    <th scope="col"><input type="checkbox"></th>
+                    <th scope="col"><input type="checkbox" id="selectAllUsers"></th>
                     <th scope="col">Name</th>
                     <th scope="col">Email</th>
                     <th scope="col">Phone</th>
@@ -29,9 +29,9 @@
                     <th scope="col">Last Active</th>
                 </tr>
             </thead>
-            <tbody>
+            <tbody class="users-table-body">
                 <tr>
-                    <td><input type="checkbox"></td>
+                    <td><input type="checkbox" class="user-checkbox"></td>
                     <td>
                         <img src="~/images/user.png" alt="Profile">
                         <a asp-controller="Users" asp-action="Details">Bryan</a>
@@ -43,7 +43,7 @@
                     <td>5 days ago</td>
                 </tr>
                 <tr>
-                    <td><input type="checkbox"></td>
+                    <td><input type="checkbox" class="user-checkbox"></td>
                     <td>
                         <img src="~/images/user.png" alt="Profile">
                         <a class="text-decoration-none text-black" href="#">Ana</a>
@@ -55,7 +55,7 @@
                     <td>5 days ago</td>
                 </tr>
                 <tr>
-                    <td><input type="checkbox"></td>
+                    <td><input type="checkbox" class="user-checkbox"></td>
                     <td>
                         <img src="~/images/user.png" alt="Profile">
                         <a class="text-decoration-none text-black" href="#">Ana</a>
