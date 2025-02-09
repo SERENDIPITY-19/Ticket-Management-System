@@ -44,46 +44,6 @@
         }
     }
 
-    // Requester Dropdown Search
-    const searchInput = document.getElementById('searchInput');
-    if (searchInput) {
-        searchInput.addEventListener('keyup', function () {
-            const searchTerm = this.value.toLowerCase();
-            const dropdownItems = document.getElementsByClassName('requester-dropdown-item');
-
-            Array.from(dropdownItems).forEach(item => {
-                const name = item.querySelector('.requester-name')?.textContent.toLowerCase() || "";
-                const email = item.querySelector('.requester-email')?.textContent.toLowerCase() || "";
-
-                if (name.includes(searchTerm) || email.includes(searchTerm)) {
-                    item.style.display = '';
-                } else {
-                    item.style.display = 'none';
-                }
-            });
-        });
-    }
-
-    // Customer Dropdown Search
-    const customerSearch = document.getElementById('customerSearch');
-    if (customerSearch) {
-        customerSearch.addEventListener('keyup', function () {
-            const searchTerm = this.value.toLowerCase();
-            const customers = document.querySelectorAll('.customers-list .customer-info');
-
-            customers.forEach(customer => {
-                const name = customer.querySelector('.customer-name')?.textContent.toLowerCase() || "";
-                const email = customer.querySelector('.customer-email')?.textContent.toLowerCase() || "";
-
-                if (name.includes(searchTerm) || email.includes(searchTerm)) {
-                    customer.style.display = '';
-                } else {
-                    customer.style.display = 'none';
-                }
-            });
-        });
-    }
-
     // Update ticket status
     document.querySelectorAll('#statusList li').forEach(item => {
         item.addEventListener('click', function () {
