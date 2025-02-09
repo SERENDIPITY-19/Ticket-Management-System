@@ -74,6 +74,10 @@ body {
     width: 400px;
 }
 
+.ticket-info {
+    padding: 5px 10px;
+}
+
 #StatusDropdown {
     width: 30px;
     height: 30px;
