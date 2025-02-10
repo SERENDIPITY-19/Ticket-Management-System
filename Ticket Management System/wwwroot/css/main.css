@@ -69,13 +69,66 @@ body {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
+.ticekt-card {
+    transition: background-color 0.3s ease;
+}
+
+.ticket-card:hover {
+    background-color: #e6f2ff;
+}
+
 .ticket-actions {
     border-radius: 7px;
     width: 400px;
 }
 
 .ticket-info {
-    padding: 5px 10px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ticket-icon {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ticket-info-checkbox {
+    display: none;
+}
+
+.ticket-card:hover .ticket-icon {
+    display: none;
+}
+
+.ticket-card:hover .ticket-info-checkbox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ticket-edit-delete {
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.ticket-card:hover .ticket-edit-delete {
+    visibility: visible;
+    opacity: 1;
+}
+
+.ticket-edit:hover {
+    color: #097ffe;
+}
+
+.ticket-delete:hover {
+    color: red;
 }
 
 #StatusDropdown {
@@ -215,7 +268,7 @@ body {
 
 .badge-inprogress {
     background-color: #ffc107;
-    color: #212529;
+    color: #fff;
 }
 
 .badge-new {
